@@ -1,0 +1,335 @@
+/* colors */
+:root {
+    --bg-body: #ccebff;
+    --nav-bg: #0073e6;
+    --text-color: #000;
+    --ui-bg: #ffffff;
+    --ui-text: #000;
+    --card-bg: #d7e9f7;
+}
+
+/* dark */
+[data-theme="dark"] {
+    --bg-body: #0f172a;
+    --nav-bg: #003c80;
+    --text-color: #fff;
+    --ui-bg: #1e293b;
+    --ui-text: #fff;
+    --card-bg: #1a2436;
+}
+
+body {
+    margin: 0;
+    background: var(--bg-body);
+    color: var(--text-color);
+    font-family: Arial;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: var(--nav-bg);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+    box-sizing: border-box;
+
+    z-index: 999;
+}
+
+.logo {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+main {
+    padding-top: 140px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box {
+    width: 900px;
+    background: #d9d9d9;
+
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.top-grid,
+.cities-grid,
+.dates-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.ui,
+.input {
+    width: 100%;
+    height: 60px;
+
+    border: none;
+    border-radius: 15px;
+
+    padding: 0 20px;
+
+    font-size: 20px;
+
+    background: var(--ui-bg);
+    color: var(--ui-text);
+
+    box-sizing: border-box;
+}
+
+/* button */
+.search-btn-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.blob-btn {
+    width: 420px;
+    height: 70px;
+
+    border: none;
+    border-radius: 40px;
+
+    background: #0073e6;
+    color: white;
+
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.suggestions {
+    position: absolute;
+    top: 65px;
+    left: 0;
+
+    width: 100%;
+
+    background: var(--ui-bg);
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    z-index: 9999;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.suggestion-item {
+    padding: 15px;
+    cursor: pointer;
+    color: var(--ui-text);
+}
+
+.suggestion-item:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.switch-bg {
+    width: 60px;
+    height: 30px;
+
+    background: #ccc;
+
+    border-radius: 999px;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+.switch-circle {
+    width: 24px;
+    height: 24px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    position: absolute;
+    top: 3px;
+    left: 3px;
+
+    transition: 0.3s;
+}
+
+.switch-bg.active {
+    background: #0073e6;
+}
+
+.switch-circle.active {
+    left: 33px;
+}
+
+/* profile */
+.profile-btn {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 22px;
+}
+
+/* results */
+#results {
+    width: 900px;
+
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.result-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--card-bg);
+
+    border-radius: 25px;
+
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.result-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: 24px;
+}
+
+/* buttons */
+.buy-btn,
+.delete-btn {
+    width: 140px;
+    height: 55px;
+
+    border: none;
+    border-radius: 15px;
+
+    color: white;
+
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.buy-btn {
+    background: #0073e6;
+}
+
+.delete-btn {
+    background: red;
+}
+
+/* deleted */
+.deleted-ticket {
+    opacity: 0.5;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    width: 700px;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: var(--ui-bg);
+    color: var(--text-color);
+
+    padding: 30px;
+    border-radius: 25px;
+}
+
+/* header */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+/* close */
+.close-btn {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: red;
+    color: white;
+
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* form */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* tickets */
+.tickets-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    font-size: 30px;
+}

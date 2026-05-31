@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+
+<header class="navbar">
+    <div class="logo">Flight Booking</div>
+
+    <div class="navbar-right">
+
+        <select id="lang" class="ui">
+            <option value="en">EN</option>
+            <option value="ua">UA</option>
+            <option value="cs">CZ</option>
+        </select>
+
+        <select id="currency" class="ui">
+            <option value="eur">EUR</option>
+            <option value="usd">USD</option>
+            <option value="czk">CZK</option>
+            <option value="uah">UAH</option>
+        </select>
+
+        <div class="theme-switch" onclick="toggleTheme()">
+            <span>☽</span>
+            <div class="switch-bg" id="switchBg">
+                <div class="switch-circle" id="switchCircle"></div>
+            </div>
+            <span>☀</span>
+        </div>
+
+        <button class="profile-btn" onclick="openProfile()">👤</button>
+    </div>
+</header>
+
+<main>
+
+    <div class="search-box">
+
+        <div class="top-grid">
+            <select id="class" class="ui">
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+            </select>
+
+            <select id="passengers" class="ui">
+                <option value="1">1 Passenger</option>
+                <option value="2">2 Passengers</option>
+                <option value="3">3 Passengers</option>
+            </select>
+        </div>
+
+        <div class="cities-grid">
+            <div class="relative">
+                <input id="from" class="input" placeholder="From">
+                <div id="suggestions-from" class="suggestions"></div>
+            </div>
+
+            <div class="relative">
+                <input id="to" class="input" placeholder="To">
+                <div id="suggestions-to" class="suggestions"></div>
+            </div>
+        </div>
+
+        <div class="dates-grid">
+            <input id="departure" class="input" type="date">
+            <input id="return" class="input" type="date">
+        </div>
+
+        <div class="search-btn-wrap">
+            <button class="blob-btn" onclick="searchFlights()">Search flights</button>
+        </div>
+    </div>
+
+    <div id="results"></div>
+</main>
+
+<div id="profileModal" class="modal hidden">
+    <div class="modal-content">
+
+        <div class="profile-header">
+            <h2 data-key="profile">Profile</h2>
+            <button class="close-btn" onclick="closeProfile()">✖</button>
+        </div>
+
+        <div class="profile-form">
+            <input id="fullname" class="input" type="text" placeholder="Full name">
+            <input id="birth" class="input" type="date">
+            <input id="passport" class="input" type="text" placeholder="Passport">
+            <input id="email" class="input" type="email" placeholder="Email">
+            <input id="password" class="input" type="password" placeholder="Password">
+
+            <div class="profile-buttons">
+                <button class="buy-btn" onclick="registerUser()">Register</button>
+                <button class="buy-btn" onclick="loginUser()">Login</button>
+            </div>
+        </div>
+
+        <div id="profileInfo"></div>
+
+        <div class="tickets-section">
+            <h3 class="tickets-title">🎫 My Tickets</h3>
+            <div id="tickets"></div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

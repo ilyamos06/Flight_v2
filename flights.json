@@ -1,0 +1,72 @@
+{
+  "title": {
+    "en": "Flight Booking",
+    "ua": "Бронювання авіаквитків",
+    "cs": "Rezervace letenek"
+  },
+  "from": {
+    "en": "From",
+    "ua": "Звідки",
+    "cs": "Odkud"
+  },
+  "to": {
+    "en": "To",
+    "ua": "Куди",
+    "cs": "Kam"
+  },
+  "search": {
+    "en": "Search flights",
+    "ua": "Пошук рейсів",
+    "cs": "Hledat lety"
+  },
+  "buy": {
+    "en": "Buy",
+    "ua": "Купити",
+    "cs": "Koupit"
+  },
+  "economy": {
+    "en": "Economy",
+    "ua": "Економ",
+    "cs": "Ekonomická"
+  },
+  "business": {
+    "en": "Business",
+    "ua": "Бізнес",
+    "cs": "Business"
+  },
+  "p1": {
+    "en": "1 Passenger",
+    "ua": "1 Пасажир",
+    "cs": "1 Cestující"
+  },
+  "p2": {
+    "en": "2 Passengers",
+    "ua": "2 Пасажири",
+    "cs": "2 Cestující"
+  },
+  "p3": {
+    "en": "3 Passengers",
+    "ua": "3 Пасажири",
+    "cs": "3 Cestující"
+  },
+  "profile": {
+    "en": "Profile",
+    "ua": "Профіль",
+    "cs": "Profil"
+  },
+  "register": {
+    "en": "Register",
+    "ua": "Реєстрація",
+    "cs": "Registrace"
+  },
+  "login": {
+    "en": "Login",
+    "ua": "Увійти",
+    "cs": "Přihlásit se"
+  },
+  "tickets": {
+    "en": "My tickets",
+    "ua": "Мої квитки",
+    "cs": "Moje letenky"
+  }
+}
